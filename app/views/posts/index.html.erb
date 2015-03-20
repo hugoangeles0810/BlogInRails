@@ -1,5 +1,7 @@
 <% @posts.each do |post| %>
-	<h2><%= link_to post.title, post %></h2>
-	<%= time_ago_in_words(post.created_at) %> Ago
-	<p><%= post.body %></p>
+	<div class="jumbotron">
+		<h2><%= link_to post.title, post %></h2>
+		<%= time_ago_in_words(post.created_at) %> ago
+		<p><%= post.body %></p>
+	</div>
 <% end %>
