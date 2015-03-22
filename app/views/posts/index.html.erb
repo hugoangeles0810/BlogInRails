@@ -1,7 +1,14 @@
 <% @posts.each do |post| %>
 	<div class="jumbotron">
+
 		<h2><%= link_to post.title, post %></h2>
-		<%= time_ago_in_words(post.created_at) %> ago
+
+		<%= time_ago_in_words(post.created_at) %> ago &nbsp; Vistas: <%= post.view_count %>
+
 		<p><%= post.body %></p>
+
+		<%= button_to like_path(post), method: :put, remote: true do %>
+			<span id="like_count_<%= post.id%>"><%= post.like_count%></span> &nbsp;<i class="fa fa-thumbs-o-up"></i>
+		<% end %>
 	</div>
 <% end %>

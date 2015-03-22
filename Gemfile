@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
+#ruby-gemset=blog
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'font-awesome-sass'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -34,7 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do
 	gem 'pg'
-	gem 'rails_12factor'
+	gem 'rails_12factor', '0.0.2'
 end
 
 group :development, :test do
